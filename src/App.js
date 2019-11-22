@@ -9,6 +9,9 @@ const APP_API = "91723cb18ae377899fd99c366f7f5099"
 
 class App extends Component {
 
+  state = {
+    recipes: []
+  }
   
   getRecipe = async (e) => {
     e.preventDefault();
@@ -16,7 +19,11 @@ class App extends Component {
     const api_call = await fetch(`https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_API}`) ;
     
     const data = await api_call.json();
-    console.log("data: ", data);
+    const recipes = data.hits
+    this.setState({
+      recipes
+    })
+    console.log("data: ", this.state.recipes);
   }
   render() {
     return (
@@ -25,6 +32,12 @@ class App extends Component {
           <h1 className="App-title">CELP for Cooking Help</h1>
         </header>
         <Form getRecipe={this.getRecipe}/>
+        { this.state.recipes.map( recipe => (
+        <div key={recipe.recipe.label}>
+          <img src={recipe.recipe.image} alt={recipe.recipe.label}/>
+          <p>{recipe.recipe.label}</p>
+        </div>
+        ) ) }
       </div>
     )
   }
