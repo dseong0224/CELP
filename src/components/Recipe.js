@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
+import LoadPage from './LoadPage';
 
 const APP_ID = "34d187f5";
 const APP_API = "91723cb18ae377899fd99c366f7f5099"
@@ -27,26 +28,18 @@ class Recipe extends React.Component {
     return (
       <div className="container">
         {this.state.activeRecipe.length === 0 && 
-        <div className="row">
-          <h2>Create your snippet's HTML, CSS and Javascript in the editor tabs</h2>
-          <div id="loading">
-            <ul className="bokeh">
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-        </div>
+        <LoadPage />
         }
         {this.state.activeRecipe.length !== 0 &&
           <div className="active-recipe">
-            <img className="active-recipe__img" src={recipe.image} alt={recipe.label} />
             <h3 className="active-recipe__title">{recipe.label}</h3>
+            <img className="active-recipe__img" src={recipe.image} alt={recipe.label} />
             <h4 className="active-recipe__publisher">
               Publisher: <span>{recipe.source}</span>
             </h4>
             <p className="active-recipe__website">
-              Website: <span><a href={recipe.url} target="__blank">{recipe.url}</a></span>
+              Website: 
+              <span><a href={recipe.url} target="__blank">{recipe.url < 20 ? `${recipe.url}` : `${recipe.url.substring(0, 25)}...`}</a></span>
             </p>
             <Link to="/" className="active-recipe__button">Go Home</Link>
           </div>
