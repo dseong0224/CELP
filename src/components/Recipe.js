@@ -26,6 +26,18 @@ class Recipe extends React.Component {
     console.log("recipe: ", recipe)
     return (
       <div className="container">
+        {this.state.activeRecipe.length === 0 && 
+        <div className="row">
+          <h2>Create your snippet's HTML, CSS and Javascript in the editor tabs</h2>
+          <div id="loading">
+            <ul className="bokeh">
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        }
         {this.state.activeRecipe.length !== 0 &&
           <div className="active-recipe">
             <img className="active-recipe__img" src={recipe.image} alt={recipe.label} />
