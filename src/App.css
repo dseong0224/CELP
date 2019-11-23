@@ -119,7 +119,8 @@ input:-webkit-autofill {
 }
 
 .active-recipe__img {
-  height: 500px !important;
+  height: 300px !important;
+  margin: 5px 0;
 }
 
 .active-recipe__title {
@@ -130,7 +131,7 @@ input:-webkit-autofill {
 
 .active-recipe__publisher, .active-recipe__website {
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -147,6 +148,7 @@ input:-webkit-autofill {
   letter-spacing: 2px;
   color: #e74c3c;
   margin-left: 10px;
+  font-size: 1rem;
 }
 
 .active-recipe__button {
