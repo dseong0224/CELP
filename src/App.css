@@ -9,8 +9,8 @@ img {
   height: 220px;
 }
 
-a {
-  color: #e74c3c !important;
+button > a {
+  color: #e74c3c;
 }
 
 button:focus {
@@ -23,8 +23,8 @@ button:focus {
 
 .App-header {
   background-color: #2c3e50;
-  height: 90px;
-  padding: 30px;
+  height: 40px;
+  padding: 15px;
   color: white;
   margin-bottom: 2rem;
 }
@@ -79,6 +79,10 @@ button:focus {
   letter-spacing: 1px;
 }
 
+form {
+  margin: 2rem;
+}
+
 .form__input {
   background: transparent;
   border: 0;
@@ -104,7 +108,7 @@ button:focus {
 }
 
 .form__button:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 input[type="text"] { 
@@ -114,6 +118,14 @@ input[type="text"] {
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 30px #f3f3f3 inset;
   -webkit-text-fill-color: #2c3e50 !important;
+}
+
+#recipes-list__item {
+  transition: 0.5s;
+}
+
+#recipes-list__item:hover {
+  transform: scale(1.05);
 }
 
 /******** RECIPE.js ********/
@@ -205,6 +217,9 @@ input:-webkit-autofill {
   transform: scale(1.2);
 } */
 
+.active-recipe__button {
+  color: #e74c3c;
+}
 
 /* load page styling */
 
@@ -306,4 +321,11 @@ input:-webkit-autofill {
 100% {
   transform: rotate(360deg);
 }
+}
+
+
+/************** Navigation.js ***************/
+
+nav > a {
+  color: white;
 }
