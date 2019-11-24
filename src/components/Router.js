@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import App from '../App';
 import Recipe from "./Recipe";
 import About from "./About"
+import Shop from "./Shop";
 import Error from './Error';
 import Navigation from './Navigation';
 
@@ -14,6 +15,7 @@ const Router = () => (
       <Switch>
         <Route path="/" component={App} exact />
         <Route path="/recipe/:id" component={Recipe} />
+        <Route path="/shop" component={Shop} />
         <Route path="/about" component={About} />
         <Route component={Error} />
       </Switch>
