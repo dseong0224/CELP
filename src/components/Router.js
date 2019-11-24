@@ -3,15 +3,22 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import App from '../App';
 import Recipe from "./Recipe";
+import About from "./About"
 import Error from './Error';
+import Navigation from './Navigation';
 
 const Router = () => (
   <BrowserRouter>
-    <Switch>
-      <Route path="/" component={App} exact />
-      <Route path="/recipe/:id" component={Recipe} />
-      <Route component={Error} />
-    </Switch>
+    <div>
+      <Navigation />
+      <Switch>
+        <Route path="/" component={App} exact />
+        <Route path="/recipe/:id" component={Recipe} />
+        <Route path="/about" component={About} />
+        <Route component={Error} />
+      </Switch>
+    </div>
+
   </BrowserRouter>
 )
 
