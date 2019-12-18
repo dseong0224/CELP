@@ -8,7 +8,6 @@ const Navigation = () => {
         <h1 className="App-title">CELP</h1>
       </header>
       <NavLink to="/">Home</NavLink>
-      <NavLink to="/shop">Shop</NavLink>
       <NavLink to="/about">About</NavLink>
     </nav>
 
