@@ -348,6 +348,7 @@ nav > a {
 
 .container > h3 {
   font-size: 1.2 rem;
+  float: left;
 }
 
 .app-detail-list {
@@ -357,7 +358,7 @@ nav > a {
 
 .app-detail-list > li {
   list-style-type: none; 
-  float:left;
+  /* float:left; */
 }
 
 .contact-me {
