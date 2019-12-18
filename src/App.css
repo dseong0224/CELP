@@ -329,3 +329,37 @@ input:-webkit-autofill {
 nav > a {
   color: white;
 }
+
+
+/************** About.js ***************/
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+.container > h1 {
+  font-size: 1.5rem;
+  margin: 50px;
+}
+
+.container > h3 {
+  font-size: 1.2 rem;
+}
+
+.app-detail-list {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.app-detail-list > li {
+  list-style-type: none; 
+  float:left;
+}
+
+.contact-me {
+  text-align: center;
+}
